@@ -24,18 +24,14 @@ exports.create_a_client = function(req, res) {
 
 //login
 exports.login_as_client = function(req, res){
-  var brugeren =req.body;
-  var brugernavninsde = brugeren.brugernavn;
-  var passwordinside = brugeren.password;
-
+  var user_name=req.body.brugernavn;
+  var password_in=req.body.password;
   //test login system
-  if(brugernavninsde=="hello"&&passwordinside=="tsm"){
+  if(user_name=="hello"&&password_in=="tsm"){
     res.send("logged in")
   }else{
-    res.send("failure")
+    res.send("you done messed up");
   }
-
-
 }
 
 
